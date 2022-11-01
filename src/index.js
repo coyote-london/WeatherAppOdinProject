@@ -10,4 +10,11 @@ function test() {
         })
 }
 
+//create module for form to collect city, state, and country info
+//have a submit button turn the information into objects
+//insert the objects into the api fetch function
+//display choosen information on new weather page
+//style pages accordingly
+
+
 test();
