@@ -1,31 +1,18 @@
 const searchForm = () => {
-    //create div container
-    //attach form to container
-    //attach city, state, and country inputs
     //get submit button to turn information into an API address
-    const searchContainer = document.createElement('div');
-        searchContainer.id = 'searchContainer';
-    
+    //Get submit button to run apimaker function
+    //fetch api and display    
     const searchForm = document.createElement('form');
         searchForm.id = 'searchForm';
-    
-    const cityInput = document.createElement('input');
-        cityInput.type = 'text';
-        cityInput.id = 'cityInput';
-        cityInput.name = 'city';
-    const cityLable = document.createElement('label');
-        cityLable.id = 'cityLable';
-        cityInput.for = 'city';
-        cityLable.innerHTML = 'city';
 
-    const stateInput = document.createElement('input');
-        stateInput.type = 'text';
-        stateInput.id = 'stateInput';
-        stateInput.name = 'state';
-    const stateLable = document.createElement('lable');
-        stateLable.id = 'stateLable';
-        stateLable.for = 'state';
-        stateLable.innerHTML = 'state';
+    const zipcodeInput = document.createElement('input');
+        zipcodeInput.type = 'text';
+        zipcodeInput.id = 'zipcodeInput';
+        zipcodeInput.name = 'zipcode';
+    const zipcodeLable = document.createElement('lable');
+        zipcodeLable.id = 'zipcodeLable';
+        zipcodeLable.for = 'zipcode';
+        zipcodeLable.innerHTML = 'zipcode';
 
     const countryInput = document.createElement('input');
         countryInput.type = 'text';
@@ -40,18 +27,14 @@ const searchForm = () => {
         submitButton.type = 'submit';
         submitButton.value = 'submit';
 
-    
-    searchContainer.appendChild(searchForm);
 
+    searchForm.appendChild(zipcodeLable);
+    searchForm.appendChild(zipcodeInput);
     searchForm.appendChild(countryLable);
     searchForm.appendChild(countryInput);
-    searchForm.appendChild(stateLable);
-    searchForm.appendChild(stateInput);
-    searchForm.appendChild(cityLable);
-    searchForm.appendChild(cityInput);
     searchForm.appendChild(submitButton);
 
-    return { searchContainer };
+    return { searchForm };
 }
 
 export { searchForm };
