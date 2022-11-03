@@ -1,0 +1,21 @@
+body {
+    background-color: rgb(87, 103, 109);
+}
+
+#homeContainer,
+#searchForm {    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#searchForm {
+    border: .2vw solid wheat;
+    border-radius: 1vw;
+    padding: 5vw
+}
+
+label, input {
+    margin: 2vw;
+}

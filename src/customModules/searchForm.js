@@ -1,3 +1,5 @@
+import { APIMaker } from "./APIAddressMaker";
+
 const searchForm = () => {
     //get submit button to turn information into an API address
     //Get submit button to run apimaker function
@@ -25,8 +27,11 @@ const searchForm = () => {
 
     const submitButton = document.createElement('input');
         submitButton.type = 'submit';
-        submitButton.value = 'submit';
-
+        submitButton.innerHTML = 'submit';
+        submitButton.onClick = e => {
+            e.stopPropagation();
+            console.log(countryInput.value);
+        }
 
     searchForm.appendChild(zipcodeLable);
     searchForm.appendChild(zipcodeInput);

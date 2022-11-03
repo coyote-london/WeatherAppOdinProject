@@ -5,3 +5,5 @@ function APIMaker(zipcode, country) {
         + country 
         + '&appid=3bdeb7609c3eff9d1997a47ba5ce1830'
 }
+
+export { APIMaker };
