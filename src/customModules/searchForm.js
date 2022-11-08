@@ -6,6 +6,7 @@ const searchForm = () => {
     //fetch api and display    
     let zipcode = '';
     let country = '';
+    let API = ''
     
     const searchForm = document.createElement('form');
         searchForm.id = 'searchForm';
@@ -35,8 +36,15 @@ const searchForm = () => {
             e.stopPropagation();
             country = countryInput.value;
             zipcode = zipcodeInput.value;
-            console.log(country);
-            console.log(zipcode);
+            API = APIMaker(zipcode, country);
+            console.log(API);
+            fetch(API, { mode:'cors'})
+        .then(function(response) {
+            console.log(response.json());
+        })
+        .catch(function(err){
+            console.log('error')
+        })
         });
     searchForm.appendChild(zipcodeLable);
     searchForm.appendChild(zipcodeInput);
