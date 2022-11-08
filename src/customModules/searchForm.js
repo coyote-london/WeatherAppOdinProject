@@ -4,6 +4,9 @@ const searchForm = () => {
     //get submit button to turn information into an API address
     //Get submit button to run apimaker function
     //fetch api and display    
+    let zipcode = '';
+    let country = '';
+    
     const searchForm = document.createElement('form');
         searchForm.id = 'searchForm';
 
@@ -26,13 +29,15 @@ const searchForm = () => {
         countryLable.innerHTML = 'country';
 
     const submitButton = document.createElement('input');
-        submitButton.type = 'submit';
-        submitButton.innerHTML = 'submit';
-        submitButton.onClick = e => {
+        submitButton.type = 'button';
+        submitButton.value = 'submit';
+        submitButton.addEventListener('click', e => {
             e.stopPropagation();
-            console.log(countryInput.value);
-        }
-
+            country = countryInput.value;
+            zipcode = zipcodeInput.value;
+            console.log(country);
+            console.log(zipcode);
+        });
     searchForm.appendChild(zipcodeLable);
     searchForm.appendChild(zipcodeInput);
     searchForm.appendChild(countryLable);
